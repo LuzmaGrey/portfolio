@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div class="scanlines"></div>
+<div class="corner corner-tl"></div>
+<div class="corner corner-tr"></div>
+<div class="corner corner-bl"></div>
+<div class="corner corner-br"></div>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="page">
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-logo">MarAr.Dev</div>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <div class="status-dot"></div>
+      Available for hire
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Available for work
+    </div>
+    <h1>
+      <span class="line1">I build digital</span>
+      <span class="line2">experiences</span>
+    </h1>
+    <p class="hero-sub">
+      Front-End developer crafting high-performance web applications<br>
+      with cutting-edge technology and pixel-perfect design.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary btn-filled"><span>View Projects</span></a>
+      <a href="#contact" class="btn-primary"><span>Contact Me</span></a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Years of Experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">40+</span>
+      <span class="stat-label">Projects Shipped</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">12</span>
+      <span class="stat-label">Technologies Mastered</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Open Source Libs</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">99%</span>
+      <span class="stat-label">Client Satisfaction</span>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">01 /</span>
+      <h2 class="section-title">Selected Work</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="gallery">
+
+      <div class="project-card">
+        <div class="card-bg">{ }</div>
+        <div class="card-content">
+          <div class="card-tag">SaaS Platform</div>
+          <div class="card-title">Orion Analytics</div>
+          <div class="card-desc">Real-time data pipeline processing 2M+ events/day. Custom query engine with sub-100ms latency, multi-tenant architecture and role-based dashboards.</div>
+          <div class="card-stack">
+            <span class="tag">React</span>
+            <span class="tag">Go</span>
+            <span class="tag">ClickHouse</span>
+            <span class="tag">Kafka</span>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-bg">[ ]</div>
+        <div class="card-content">
+          <div class="card-tag">Mobile App</div>
+          <div class="card-title">Meridian Finance</div>
+          <div class="card-desc">AI-powered personal finance app with predictive spending insights, bank-grade encryption and biometric auth. 50K+ active users, 4.8★ rating.</div>
+          <div class="card-stack">
+            <span class="tag">React Native</span>
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-bg">&#60;/&#62;</div>
+        <div class="card-content">
+          <div class="card-tag">Developer Tool</div>
+          <div class="card-title">FlowDiff</div>
+          <div class="card-desc">VS Code extension for semantic code diffing using AST analysis. Reduces review time by 40%. 8K+ installs on the marketplace, open source.</div>
+          <div class="card-stack">
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tree-sitter</span>
+            <span class="tag">VSCode API</span>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-bg">◈</div>
+        <div class="card-content">
+          <div class="card-tag">E-Commerce</div>
+          <div class="card-title">Novu Commerce</div>
+          <div class="card-desc">Headless e-commerce platform with edge-cached storefronts, A/B testing engine and ML-driven product recommendations. $2M+ GMV processed.</div>
+          <div class="card-stack">
+            <span class="tag">Next.js</span>
+            <span class="tag">Rust</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Stripe</span>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-bg">⬡</div>
+        <div class="card-content">
+          <div class="card-tag">AI / ML</div>
+          <div class="card-title">Synapse LLM Gateway</div>
+          <div class="card-desc">Unified API gateway for multiple LLM providers with cost routing, rate limiting, prompt caching and observability. Handles 100K+ requests/day.</div>
+          <div class="card-stack">
+            <span class="tag">FastAPI</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Docker</span>
+            <span class="tag">k8s</span>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-bg">∞</div>
+        <div class="card-content">
+          <div class="card-tag">IoT Platform</div>
+          <div class="card-title">GridSense</div>
+          <div class="card-desc">Industrial IoT platform connecting 10K+ sensors with real-time anomaly detection, predictive maintenance alerts, and SCADA integration.</div>
+          <div class="card-stack">
+            <span class="tag">MQTT</span>
+            <span class="tag">TimescaleDB</span>
+            <span class="tag">Grafana</span>
+          </div>
+        </div>
+        <div class="card-arrow">↗</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">02 /</span>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-icon">TS</div>
+        <div class="skill-name">TypeScript / JS</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+        <div class="skill-level">EXPERT · 5 YRS</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">Py</div>
+        <div class="skill-name">Python</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+        <div class="skill-level">ADVANCED · 4 YRS</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">Rs</div>
+        <div class="skill-name">Rust</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+        <div class="skill-level">BEGGINGER · -1 YRS</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">⚛</div>
+        <div class="skill-name">React / Next.js</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+        <div class="skill-level"> · 1 YRS</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">DB</div>
+        <div class="skill-name">Databases</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+        <div class="skill-level"> · 1 YRS</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-icon">AI</div>
+        <div class="skill-name">ML / LLMs</div>
+        <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+        <div class="skill-level">PROFICIENT · 2 YRS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-num">03 /</span>
+      <h2 class="section-title">Experience</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2022 — PRESENT</div>
+        <div class="timeline-role">Senior Software Engineer</div>
+        <div class="timeline-company">Stellar Systems · Remote</div>
+        <div class="timeline-desc">Led architecture of distributed data platform handling 50TB+ daily. Mentored team of 6 engineers. Reduced infrastructure costs by 35% through optimization.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2020 — 2022</div>
+        <div class="timeline-role">Full-Stack Developer</div>
+        <div class="timeline-company">NovaTech Labs · San Francisco, CA</div>
+        <div class="timeline-desc">Built core product features for B2B SaaS serving 500+ enterprise clients. Shipped 3 major product launches. Improved API response times by 60%.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2019 — 2020</div>
+        <div class="timeline-role">Frontend Engineer</div>
+        <div class="timeline-company">Pixel & Co. · New York, NY</div>
+        <div class="timeline-desc">Developed interactive data visualizations and design systems for Fortune 500 clients. Co-authored open source charting library with 2K+ GitHub stars.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">04 /</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="contact-copy">
+          Open to senior and staff-level roles, technical co-founder opportunities, and interesting contract work. Response within 24h.
+        </p>
+        <a href="mailto:alex@example.com" class="contact-link">
+          <span class="contact-link-icon">@</span>
+          alex@example.com
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">in</span>
+          linkedin.com/in/alexdev
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">gh</span>
+          github.com/alexdev
+        </a>
+        <a href="#" class="contact-link">
+          <span class="contact-link-icon">↓</span>
+          Download Resume (PDF)
+        </a>
+      </div>
+      <div class="contact-form">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-input" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about the opportunity..."></textarea>
+        </div>
+        <button class="btn-primary contact-submit"><span>Send Message</span></button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2025 Alex Dev — Built with precision</span>
+    <span class="footer-status">AVAILABLE FOR HIRE</span>
+  </footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
