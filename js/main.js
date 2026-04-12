@@ -1,41 +1,3 @@
-// ── Custom cursor
-const cur = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cur.style.left = mx - 5 + 'px';
-  cur.style.top = my - 5 + 'px';
-});
-
-function animRing() {
-  rx += (mx - rx - 18) * 0.14;
-  ry += (my - ry - 18) * 0.14;
-  ring.style.left = rx + 'px';
-  ring.style.top = ry + 'px';
-  requestAnimationFrame(animRing);
-}
-animRing();
-
-const neonRing = ['rgba(0,245,255,0.9)', 'rgba(191,0,255,0.9)', 'rgba(255,0,110,0.9)', 'rgba(0,255,157,0.9)', 'rgba(255,184,0,0.9)'];
-let neonIdx = 0;
-document.querySelectorAll('a,button,.project-card,.skill-item,.contact-link').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    neonIdx = (neonIdx + 1) % neonRing.length;
-    ring.style.width = '56px'; ring.style.height = '56px';
-    ring.style.borderColor = neonRing[neonIdx];
-    cur.style.background = neonRing[neonIdx].replace('0.9','1');
-    cur.style.transform = 'scale(1.5)';
-  });
-  el.addEventListener('mouseleave', () => {
-    ring.style.width = '36px'; ring.style.height = '36px';
-    ring.style.borderColor = 'rgba(0,245,255,0.6)';
-    cur.style.background = '#00f5ff';
-    cur.style.transform = 'scale(1)';
-  });
-});
-
 // ── Three.js background
 const canvas = document.getElementById('bg-canvas');
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
@@ -67,37 +29,6 @@ neonColors.forEach((col, gi) => {
   pGroups.push(pts);
 });
 
-// Grid lines — purple tinted
-const gridHelper = new THREE.GridHelper(200, 20, 0x2a0050, 0x150028);
-gridHelper.position.y = -40;
-gridHelper.material.opacity = 0.5;
-gridHelper.material.transparent = true;
-scene.add(gridHelper);
-
-// Floating geometric shapes — each a different neon color
-const shapes = [];
-const geos = [
-  new THREE.OctahedronGeometry(4, 0),
-  new THREE.TetrahedronGeometry(3.5, 0),
-  new THREE.IcosahedronGeometry(3, 0),
-  new THREE.OctahedronGeometry(2.5, 0),
-  new THREE.TetrahedronGeometry(2.8, 0),
-];
-
-for (let i = 0; i < 10; i++) {
-  const col = neonColors[i % neonColors.length];
-  const mat = new THREE.MeshBasicMaterial({ color: col, wireframe: true, transparent: true, opacity: 0.13 });
-  const mesh = new THREE.Mesh(geos[i % geos.length], mat);
-  mesh.position.set(
-    (Math.random() - 0.5) * 130,
-    (Math.random() - 0.5) * 90,
-    (Math.random() - 0.5) * 60 - 20
-  );
-  mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
-  scene.add(mesh);
-  shapes.push({ mesh, speed: Math.random() * 0.003 + 0.001 });
-}
-
 // Mouse influence
 let mouseX = 0, mouseY = 0;
 document.addEventListener('mousemove', e => {
@@ -125,13 +56,6 @@ function animate() {
   camera.position.y += (mouseY * 5 - camera.position.y) * 0.04;
   camera.lookAt(scene.position);
 
-  shapes.forEach(({ mesh, speed }) => {
-    mesh.rotation.x += speed;
-    mesh.rotation.y += speed * 0.7;
-    mesh.position.y += Math.sin(t + mesh.position.x) * 0.02;
-  });
-
-  gridHelper.position.z = ((t * 3) % 10);
   renderer.render(scene, camera);
 }
 animate();

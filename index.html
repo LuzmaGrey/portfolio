@@ -3,27 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dev Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<title>Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
 <div class="scanlines"></div>
-<div class="corner corner-tl"></div>
-<div class="corner corner-tr"></div>
-<div class="corner corner-bl"></div>
-<div class="corner corner-br"></div>
-
 <canvas id="bg-canvas"></canvas>
 
 <div class="page">
 
   <!-- Nav -->
   <nav>
-    <div class="nav-logo">MarAr.Dev</div>
+    <div class="nav-logo">Portfolio</div>
     <ul class="nav-links">
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -32,7 +25,7 @@
     </ul>
     <div class="nav-status">
       <div class="status-dot"></div>
-      Available for hire
+      Open to opportunities
     </div>
   </nav>
 
@@ -40,15 +33,15 @@
   <section class="hero">
     <div class="hero-badge">
       <div class="hero-badge-dot"></div>
-      Available for work
+      Front-end portfolio
     </div>
     <h1>
-      <span class="line1">I build digital</span>
-      <span class="line2">experiences</span>
+      <span class="line1">I build friendly</span>
+      <span class="line2">web experiences</span>
     </h1>
     <p class="hero-sub">
-      Front-End developer crafting high-performance web applications<br>
-      with cutting-edge technology and pixel-perfect design.
+      Front-end developer creating responsive websites, thoughtful interfaces,
+      and smooth user experiences.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary btn-filled"><span>View Projects</span></a>
@@ -67,119 +60,116 @@
     </div>
     <div class="stat">
       <span class="stat-num">40+</span>
-      <span class="stat-label">Projects Shipped</span>
+      <span class="stat-label">Projects Built</span>
     </div>
     <div class="stat">
       <span class="stat-num">12</span>
-      <span class="stat-label">Technologies Mastered</span>
+      <span class="stat-label">Technologies Practiced</span>
     </div>
     <div class="stat">
-      <span class="stat-num">3</span>
-      <span class="stat-label">Open Source Libs</span>
+      <span class="stat-num">8</span>
+      <span class="stat-label">UI Concepts</span>
     </div>
     <div class="stat">
-      <span class="stat-num">99%</span>
-      <span class="stat-label">Client Satisfaction</span>
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Learning Mindset</span>
     </div>
   </div>
 
   <!-- Projects -->
   <section id="projects">
     <div class="section-header">
-      <span class="section-num">01 /</span>
+      <span class="section-num">// Projects</span>
       <h2 class="section-title">Selected Work</h2>
       <div class="section-line"></div>
     </div>
     <div class="gallery">
 
       <div class="project-card">
-        <div class="card-bg">{ }</div>
+        <div class="card-bg">01</div>
         <div class="card-content">
-          <div class="card-tag">SaaS Platform</div>
-          <div class="card-title">Orion Analytics</div>
-          <div class="card-desc">Real-time data pipeline processing 2M+ events/day. Custom query engine with sub-100ms latency, multi-tenant architecture and role-based dashboards.</div>
+          <div class="card-tag">Dashboard</div>
+          <div class="card-title">Analytics UI</div>
+          <div class="card-desc">Responsive dashboard concept with reusable cards, clear data sections, and polished interactions for desktop and mobile screens.</div>
           <div class="card-stack">
             <span class="tag">React</span>
-            <span class="tag">Go</span>
-            <span class="tag">ClickHouse</span>
-            <span class="tag">Kafka</span>
+            <span class="tag">CSS Grid</span>
+            <span class="tag">Charts</span>
           </div>
         </div>
         <div class="card-arrow">↗</div>
       </div>
 
       <div class="project-card">
-        <div class="card-bg">[ ]</div>
+        <div class="card-bg">02</div>
         <div class="card-content">
-          <div class="card-tag">Mobile App</div>
-          <div class="card-title">Meridian Finance</div>
-          <div class="card-desc">AI-powered personal finance app with predictive spending insights, bank-grade encryption and biometric auth. 50K+ active users, 4.8★ rating.</div>
+          <div class="card-tag">Mobile Layout</div>
+          <div class="card-title">Finance App Concept</div>
+          <div class="card-desc">Mobile-first interface for tracking spending, reviewing categories, and moving through a clean daily finance flow.</div>
           <div class="card-stack">
-            <span class="tag">React Native</span>
-            <span class="tag">Python</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
           </div>
         </div>
         <div class="card-arrow">↗</div>
       </div>
 
       <div class="project-card">
-        <div class="card-bg">&#60;/&#62;</div>
+        <div class="card-bg">03</div>
         <div class="card-content">
-          <div class="card-tag">Developer Tool</div>
-          <div class="card-title">FlowDiff</div>
-          <div class="card-desc">VS Code extension for semantic code diffing using AST analysis. Reduces review time by 40%. 8K+ installs on the marketplace, open source.</div>
+          <div class="card-tag">Web Tool</div>
+          <div class="card-title">Task Planner</div>
+          <div class="card-desc">Small productivity tool concept focused on simple task entry, visual status changes, and a calm working rhythm.</div>
           <div class="card-stack">
             <span class="tag">TypeScript</span>
-            <span class="tag">Tree-sitter</span>
-            <span class="tag">VSCode API</span>
+            <span class="tag">DOM</span>
+            <span class="tag">Local UI</span>
           </div>
         </div>
         <div class="card-arrow">↗</div>
       </div>
 
       <div class="project-card">
-        <div class="card-bg">◈</div>
+        <div class="card-bg">04</div>
         <div class="card-content">
           <div class="card-tag">E-Commerce</div>
-          <div class="card-title">Novu Commerce</div>
-          <div class="card-desc">Headless e-commerce platform with edge-cached storefronts, A/B testing engine and ML-driven product recommendations. $2M+ GMV processed.</div>
+          <div class="card-title">Shop Landing Page</div>
+          <div class="card-desc">Responsive storefront page with product highlights, readable sections, and clear calls to action across screen sizes.</div>
           <div class="card-stack">
-            <span class="tag">Next.js</span>
-            <span class="tag">Rust</span>
-            <span class="tag">Redis</span>
-            <span class="tag">Stripe</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">Forms</span>
+            <span class="tag">UI Design</span>
           </div>
         </div>
         <div class="card-arrow">↗</div>
       </div>
 
       <div class="project-card">
-        <div class="card-bg">⬡</div>
+        <div class="card-bg">05</div>
         <div class="card-content">
-          <div class="card-tag">AI / ML</div>
-          <div class="card-title">Synapse LLM Gateway</div>
-          <div class="card-desc">Unified API gateway for multiple LLM providers with cost routing, rate limiting, prompt caching and observability. Handles 100K+ requests/day.</div>
+          <div class="card-tag">Interactive UI</div>
+          <div class="card-title">Creative Prompt Page</div>
+          <div class="card-desc">Playful interface for writing prompts, saving ideas, and keeping the experience clean and approachable.</div>
           <div class="card-stack">
-            <span class="tag">FastAPI</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">Docker</span>
-            <span class="tag">k8s</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Animation</span>
+            <span class="tag">UX</span>
           </div>
         </div>
         <div class="card-arrow">↗</div>
       </div>
 
       <div class="project-card">
-        <div class="card-bg">∞</div>
+        <div class="card-bg">06</div>
         <div class="card-content">
-          <div class="card-tag">IoT Platform</div>
-          <div class="card-title">GridSense</div>
-          <div class="card-desc">Industrial IoT platform connecting 10K+ sensors with real-time anomaly detection, predictive maintenance alerts, and SCADA integration.</div>
+          <div class="card-tag">Portfolio</div>
+          <div class="card-title">Personal Website</div>
+          <div class="card-desc">A flexible portfolio layout with project cards, skills, contact details, and motion that still feels comfortable on small screens.</div>
           <div class="card-stack">
-            <span class="tag">MQTT</span>
-            <span class="tag">TimescaleDB</span>
-            <span class="tag">Grafana</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Three.js</span>
           </div>
         </div>
         <div class="card-arrow">↗</div>
@@ -191,7 +181,7 @@
   <!-- Skills -->
   <section id="skills">
     <div class="section-header">
-      <span class="section-num">02 /</span>
+      <span class="section-num">// Stack</span>
       <h2 class="section-title">Tech Stack</h2>
       <div class="section-line"></div>
     </div>
@@ -200,37 +190,37 @@
         <div class="skill-icon">TS</div>
         <div class="skill-name">TypeScript / JS</div>
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
-        <div class="skill-level">EXPERT · 5 YRS</div>
+        <div class="skill-level">PRACTICED · 1 YR</div>
       </div>
       <div class="skill-item">
         <div class="skill-icon">Py</div>
         <div class="skill-name">Python</div>
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
-        <div class="skill-level">ADVANCED · 4 YRS</div>
+        <div class="skill-level">LEARNING · 1 YR</div>
       </div>
       <div class="skill-item">
         <div class="skill-icon">Rs</div>
         <div class="skill-name">Rust</div>
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
-        <div class="skill-level">BEGGINGER · -1 YRS</div>
+        <div class="skill-level">BEGINNER</div>
       </div>
       <div class="skill-item">
         <div class="skill-icon">⚛</div>
         <div class="skill-name">React / Next.js</div>
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
-        <div class="skill-level"> · 1 YRS</div>
+        <div class="skill-level">PRACTICED · 1 YR</div>
       </div>
       <div class="skill-item">
         <div class="skill-icon">DB</div>
         <div class="skill-name">Databases</div>
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-        <div class="skill-level"> · 1 YRS</div>
+        <div class="skill-level">LEARNING · 1 YR</div>
       </div>
       <div class="skill-item">
         <div class="skill-icon">AI</div>
         <div class="skill-name">ML / LLMs</div>
         <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-        <div class="skill-level">PROFICIENT · 2 YRS</div>
+        <div class="skill-level">EXPLORING</div>
       </div>
     </div>
   </section>
@@ -238,31 +228,31 @@
   <!-- Experience -->
   <section id="experience">
     <div class="section-header">
-      <span class="section-num">03 /</span>
+      <span class="section-num">// Path</span>
       <h2 class="section-title">Experience</h2>
       <div class="section-line"></div>
     </div>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2022 — PRESENT</div>
-        <div class="timeline-role">Senior Software Engineer</div>
-        <div class="timeline-company">Stellar Systems · Remote</div>
-        <div class="timeline-desc">Led architecture of distributed data platform handling 50TB+ daily. Mentored team of 6 engineers. Reduced infrastructure costs by 35% through optimization.</div>
+        <div class="timeline-date">NOW</div>
+        <div class="timeline-role">Building Front-End Projects</div>
+        <div class="timeline-company">Portfolio Practice</div>
+        <div class="timeline-desc">Creating responsive pages, interactive components, and polished layouts while improving structure, accessibility, and visual consistency.</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2020 — 2022</div>
-        <div class="timeline-role">Full-Stack Developer</div>
-        <div class="timeline-company">NovaTech Labs · San Francisco, CA</div>
-        <div class="timeline-desc">Built core product features for B2B SaaS serving 500+ enterprise clients. Shipped 3 major product launches. Improved API response times by 60%.</div>
+        <div class="timeline-date">RECENT</div>
+        <div class="timeline-role">JavaScript and UI Practice</div>
+        <div class="timeline-company">Personal Projects</div>
+        <div class="timeline-desc">Working with layout systems, DOM interactions, reusable sections, and small animations that make interfaces feel more alive.</div>
       </div>
       <div class="timeline-item">
         <div class="timeline-dot"></div>
-        <div class="timeline-date">2019 — 2020</div>
-        <div class="timeline-role">Frontend Engineer</div>
-        <div class="timeline-company">Pixel & Co. · New York, NY</div>
-        <div class="timeline-desc">Developed interactive data visualizations and design systems for Fortune 500 clients. Co-authored open source charting library with 2K+ GitHub stars.</div>
+        <div class="timeline-date">START</div>
+        <div class="timeline-role">Design and Web Foundations</div>
+        <div class="timeline-company">Learning Path</div>
+        <div class="timeline-desc">Practicing semantic HTML, modern CSS, responsive design, and user-friendly page structure.</div>
       </div>
     </div>
   </section>
@@ -270,30 +260,30 @@
   <!-- Contact -->
   <section id="contact">
     <div class="section-header">
-      <span class="section-num">04 /</span>
+      <span class="section-num">// Contact</span>
       <h2 class="section-title">Get In Touch</h2>
       <div class="section-line"></div>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
         <p class="contact-copy">
-          Open to senior and staff-level roles, technical co-founder opportunities, and interesting contract work. Response within 24h.
+          Open to front-end opportunities, portfolio feedback, and creative web projects.
         </p>
-        <a href="mailto:alex@example.com" class="contact-link">
+        <a href="mailto:hello@example.com" class="contact-link">
           <span class="contact-link-icon">@</span>
-          alex@example.com
+          hello@example.com
         </a>
         <a href="#" class="contact-link">
           <span class="contact-link-icon">in</span>
-          linkedin.com/in/alexdev
+          linkedin.com/in/your-profile
         </a>
         <a href="#" class="contact-link">
           <span class="contact-link-icon">gh</span>
-          github.com/alexdev
+          github.com/your-profile
         </a>
         <a href="#" class="contact-link">
           <span class="contact-link-icon">↓</span>
-          Download Resume (PDF)
+          Resume available on request
         </a>
       </div>
       <div class="contact-form">
@@ -315,8 +305,8 @@
   </section>
 
   <footer>
-    <span>© 2025 Alex Dev — Built with precision</span>
-    <span class="footer-status">AVAILABLE FOR HIRE</span>
+    <span>© 2026 Portfolio — Built with care</span>
+    <span class="footer-status">OPEN TO OPPORTUNITIES</span>
   </footer>
 
 </div>
