@@ -60,6 +60,32 @@ function animate() {
 }
 animate();
 
+// ── Mobile navigation
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+function closeNav() {
+  document.body.classList.remove('nav-open');
+  navToggle?.setAttribute('aria-expanded', 'false');
+}
+
+navToggle?.addEventListener('click', () => {
+  const isOpen = document.body.classList.toggle('nav-open');
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', closeNav);
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) closeNav();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeNav();
+});
+
 // ── Ripple on card click
 function rippleClick(e, el) {
   const rect = el.getBoundingClientRect();
