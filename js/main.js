@@ -11,9 +11,20 @@ camera.position.z = 80;
 // Multicolor particles — split into groups
 const neonColors = [0x00f5ff, 0xbf00ff, 0xff006e, 0x00ff9d, 0xffb800];
 const pGroups = [];
+const particleCanvas = document.createElement('canvas');
+particleCanvas.width = 32;
+particleCanvas.height = 32;
+const particleContext = particleCanvas.getContext('2d');
+const particleGradient = particleContext.createRadialGradient(16, 16, 0, 16, 16, 16);
+particleGradient.addColorStop(0, 'rgba(255,255,255,1)');
+particleGradient.addColorStop(0.35, 'rgba(255,255,255,0.85)');
+particleGradient.addColorStop(1, 'rgba(255,255,255,0)');
+particleContext.fillStyle = particleGradient;
+particleContext.fillRect(0, 0, 32, 32);
+const particleTexture = new THREE.CanvasTexture(particleCanvas);
 
 neonColors.forEach((col, gi) => {
-  const count = 360;
+  const count = window.innerWidth < 768 ? 180 : 320;
   const geo = new THREE.BufferGeometry();
   const pos = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
@@ -22,7 +33,15 @@ neonColors.forEach((col, gi) => {
     pos[i * 3 + 2] = (Math.random() - 0.5) * 180;
   }
   geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
-  const mat = new THREE.PointsMaterial({ color: col, size: 0.55, transparent: true, opacity: 0.55, sizeAttenuation: true });
+  const mat = new THREE.PointsMaterial({
+    color: col,
+    size: window.innerWidth < 768 ? 1.35 : 1.75,
+    map: particleTexture,
+    transparent: true,
+    opacity: 0.58,
+    depthWrite: false,
+    sizeAttenuation: false,
+  });
   const pts = new THREE.Points(geo, mat);
   pts.rotation.x = gi * 0.4;
   scene.add(pts);
